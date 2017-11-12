@@ -1,0 +1,83 @@
+{% extends 'basehtml.html' %}
+
+
+{% block body %}
+  <body>
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand hidden-sm" href="/" onclick="">首页</a>
+      </div>
+      <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="hidden-sm hidden-md"><a href="/upload" target="_blank" onclick="">上传明星资料</a></li>
+          <li><a href="#" target="_blank" onclick="">预备键</a></li>
+          <li><a href="#" target="_blank" onclick="">预备键</a></li>
+          <li><a href="#" target="_blank" onclick="">预备键</a></li>
+          <li><a href="/login" target="_blank" onclick="">登陆</a></li>
+          <li><a href="/regset" target="_blank" onclick="">注册</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right hidden-sm">
+          <li><a href="#" onclick="">预备键</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container projects">
+
+    <div class="projects-header page-header">
+      <h2>明星推荐</h2>
+      <p>市场最抢手的明星都在这里，希望您能找到自己喜欢的</p>
+    </div>
+
+    <div class="row">
+
+      {% for file in files %}
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 336px;">
+            <a href="#" title="Bootstrap 编码规范"  onclick="">
+              <img class="lazy" src="/upload{{file['pic']}}" width="300" height="150">
+            </a>
+
+
+
+               ￥<span>{{ file['price'] }}</span>/晚
+
+                                <span class="house-title">（{{ file['name'] }} /{{file['age']}}岁）</span>
+            <br>
+                                <em>{{file['score']}}分/{{ file['date_add']}}</em>
+          </div>
+        </div>
+      {% end %}
+
+
+
+
+    </div>
+  </div>
+</body>
+
+
+{% end %}
+
+
+
+
+
+
+
+
+
+
+

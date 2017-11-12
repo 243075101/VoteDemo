@@ -1,0 +1,77 @@
+
+{% extends 'basehtml.html' %}
+
+
+{% block body %}
+
+  <body>
+
+   <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand hidden-sm" href="/" onclick="">首页</a>
+      </div>
+      <div class="navbar-collapse collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="hidden-sm hidden-md"><a href="/upload" target="_blank" onclick="">上传明星资料</a></li>
+          <li><a href="#" target="_blank" onclick="">预备键</a></li>
+          <li><a href="#" target="_blank" onclick="">预备键</a></li>
+          <li><a href="#" target="_blank" onclick="">预备键</a></li>
+          <li><a href="#" target="_blank" onclick="">预备键</a></li>
+          <li><a href="#" target="_blank" onclick="">预备键</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right hidden-sm">
+          <li><a href="#" onclick="">预备键</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+   <div class="container projects">
+
+    <div class="projects-header page-header">
+
+    </div>
+
+    <div class="row">
+         <form method="post" action="" enctype="multipart/form-data">
+
+        <input type="text" name="name" placeholder="输入姓名">
+             <br>
+        <input type="text" name="age" placeholder="输入年龄">
+             <br>
+        <input type="text" name="score" placeholder="输入分数">
+             <br>
+        <input type="text" name="price" placeholder="输入价格">
+             <br>
+        <input type="file" name="pic" >
+             <br>
+        <input type="submit">
+
+
+    </form>
+
+        </div>
+   </div>
+
+</body>
+
+
+{% end %}
+
+
+
+
+
+
+
+
+
+
+
